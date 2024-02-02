@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .product-detail {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        pre {
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Detail</h1>
+        <div class="product-detail" id="productDetail"></div>
+    </div>
+    <script>
+        // Extract product details from URL query parameters
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const productName = urlParams.get('name');
+        const productPrice = urlParams.get('price');
+        const productImage = urlParams.get('image');
+
+        // Display product details in the page
+        const productDetailElement = document.getElementById('productDetail');
+        if (productName && productPrice && productImage) {
+            const detailString = `
+                <img src="${productImage}" alt="${productName}">
+                <pre>
+                    Name: ${productName}
+                    Price: ${productPrice}
+                </pre>
+            `;
+            productDetailElement.innerHTML = detailString;
+        } else {
+            productDetailElement.innerHTML = '<p>No product details found.</p>';
+        }
+    </script>
+</body>
+</html>

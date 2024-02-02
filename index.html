@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="/Font Awesome v5/Font Awesome v5/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+
+
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+    </style>
+</head>
+<body>
+<!-- home -->
+<!-- start Header -->
+    <section id="header">
+        <a href="#">
+            <img src="img/logo.png" class="logo" alt="Logo" srcset="">
+        </a>
+        <div>
+            <ul   id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.htm">Shop</a></li>
+                <li><a href="blog.htm">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li ><a id="lg-bg" href="product.html" ><i class="far fa-shopping-bag"></i></a></li>
+                <a href=""id="close"><i   class="far fa-times"></i></a>
+            </ul>            
+        </div>
+        <div id="mobile">
+           <a href="product.html" ><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="hero">
+        <h4>trade-in-offer</h4>
+        <h2>super value deals</h2>
+        <h1> on all products</h1>
+        <p>save more with coupons & up to 70 off! </p>
+        <button>shop now</button>
+    </section>
+<!-- End Header -->
+<!-- start Featuret -->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.png" alt="">
+            <h6>free shopping </h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.png" alt="">
+            <h6>online order </h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.png" alt="">
+            <h6>save money </h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f4.png" alt="">
+            <h6>promotion</h6>
+        </div>        
+        <div class="fe-box">
+            <img src="img/features/f5.png" alt="">
+            <h6>happey sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f6.png" alt="">
+            <h6>f24/7 suuport</h6>
+        </div>
+    </section>
+<!-- start Feature pproducts -->
+    <section id="product1"class="section-p1">
+        <h2>Featured products </h2>
+        <p>summer collection new moden design</p>
+
+        <!-- <div class="produc-container">
+            <section class="slider">
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-b" onclick="changeImage(-1)">
+                        <button><i class="fal fa-long-arrow-alt-left"></i></button>
+                    </li>                
+                    <li class="item-a">
+                        <div class="box">
+                            <div class="slide-img">
+                                <img alt="1" src="img/blog/b6.jpg">
+                                <div class="overlay">
+                                    <a href="#" class="buy-btn">Buy Now</a>	
+                                </div>
+                            </div>      
+                        </div>		
+                    </li>                    
+                    <li class="item-b" onclick="changeImage(1)">
+                        <button>  
+                            <i class="fal fa-long-arrow-alt-right"></i>
+                        </button>
+                    </li>            
+                </ul> -->
+                
+        </section>
+        </div>
+    </section>
+
+<!-- end Feature pproducts -->
+<!-- end Feature -->
+
+<div class="container">
+    <div class="slider-wrapper">
+      <button id="prev-slide" class="slide-button material-symbols-rounded">
+        <i class="fal fa-long-arrow-alt-left"></i>
+      </button>
+      <ul class="image-list">
+        <img class="image-item" src="img/blog/fall-studio-shot-two-models-with-blond-wavy-hairstyle-wool-straw-hat-wearing-striped-poncho.jpg" alt="img-1" />
+        <img class="image-item" src="img/blog/b1.jpg" alt="img-3" />
+        <img class="image-item" src="img/blog/full-length-shot-elegant-lady-red-hat-black-purple-outfit-posing-with-hanger-with-elegant-dresses-shoes-packages.jpg" alt="img-4" />
+        <img class="image-item" src="img/blog/trendy-couple-gloomy-city.jpg" alt="img-5" />
+        <img class="image-item" src="img/blog/b4.jpg" alt="img-6" />
+        <img class="image-item" src="img/blog/b2.jpg" alt="img-7" />  
+      </ul>
+      <button id="next-slide" class="slide-button material-symbols-rounded">
+        <i class="fal fa-long-arrow-alt-right"></i>
+      </button>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </div>
+<!-- Strat slider -->
+<!-- End slider -->
+<!--start panar section -->
+<section id="pannar" class="section-m1">
+    <h4>Repair Services</h4>
+    <h2>up to <span>70% off</span>-all T-Shirts & Assessories </h2>
+    <button class="normal">Explore more</button>
+</section>
+<section id="sm-banner" class="section-p1">
+    <div class="banner-box banner1">
+        <h4>crazy deals</h4>
+        <h2>buy 1 get 1 free</h2>
+        <span>the best classic dress is on sale cara</span>
+        <button>Learn more</button>
+    </div>
+    <div class="banner-box banner2">
+        <h4>spring / summer</h4>
+        <h2>upcomming season</h2>
+        <span>the best classic dress is on sale cara</span>
+        <button>Collection</button>
+    </div>
+</section>
+<section id="sale-collection">
+    <div class="sale sale-three" >
+        <h2>T-shirts</h2>
+        <h3>New Trandy price</h3>
+    </div>
+    <div class="sale sale-one" >
+        <h2>New footwear collection </h2>
+        <h3>spring/summer brand</h3>
+        
+    </div>
+    <div class="sale sale-two" >
+        <h2>seasonal sale</h2>
+        <h3>winter collection 50% off</h3>
+    </div>
+ 
+</section>
+<!-- End panar section -->
+<!-- Sign up section -->
+<section id="newSletters" class="section-p1 section-m1">
+    <div class="newtext">
+        <h4>sign up for newSletters</h4>
+        <p>get e-mail updates about our last shop and <span>special offers</span> </p>        
+    </div>
+    <div class="form">
+        <input type="email" placeholder="Enter your email address">
+        <button class="normal">Sign up</button>
+    </div>
+
+
+</section>
+<!--End Sign up section -->
+<!-- footer -->
+<footer class="section-p1">
+ <div class="col ">
+     <img class="logo" src="img/logo.png" alt="" srcset="">
+    <h4>contact</h4>
+    <p><i class="fas fa-home mr-3"></i><strong>Address: </strong> New York, NY 10012, US</p>
+    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+    <div class="follow">
+        <h4>Follow us</h4>
+        <div class="icons">
+            <a href="" >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" >
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="" >
+                <i class="fab fa-github"></i>
+              </a>
+        </div>
+    </div>
+ </div>
+ <div class="col ">
+    <h4>About US</h4>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy policy</a>
+    <a href="#">Term & condition</a>
+    <a href="#">contact us</a>
+ </div>
+ <div class="col ">
+    <h4>My Accounts</h4>
+    <a href="#">Sign in</a>
+    <a href="#">View cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">trak my order</a>
+    <a href="#">Help</a>
+ </div>
+ <div class="col install">
+    <h4>install app</h4>
+    <p>from app store or google play</p>
+    <div class="row">
+        <img src="img/pay/app.jpg" alt="" srcset="">
+        <img src="img/pay/play.jpg" alt="" srcset="">
+    </div>
+    <p>secured payment gateways</p>
+    <img src="img/pay/pay.png" alt="">
+ </div>
+ 
+
+</footer>
+<section class="copyright">
+    <div >
+        <p> © 2024 Copyright: Gehad NAbel HTML & CSS & JS Ecommerce site  </p>
+     </div>
+</section>
+<!-- End footer -->
+<script>
+
+    // change slider image
+    let currentIndex = 0;
+    const images = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6']; // List of image names
+
+    function changeImage(direction) {
+        currentIndex += direction;
+        if (currentIndex >= images.length) {
+            currentIndex = 0; // Reset index to start if it exceeds array length
+        } else if (currentIndex < 0) {
+            currentIndex = images.length - 1; // Set index to end if it goes below 0
+        }
+        const currentImage = images[currentIndex];
+        document.querySelector('.slide-img img').src = `img/blog/${currentImage}.jpg`;
+    }
+    const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+</script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
