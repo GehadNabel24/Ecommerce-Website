@@ -22,10 +22,10 @@
         <div>
             <ul   id="navbar">
                 <li><a  href="index.html">Home</a></li>
-                <li><a class="active" href="shop.htm">Shop</a></li>
-                <li><a href="contact.html">About</a></li>
-                <li><a href="#footer">Contact</a></li>
-                <li ><a id="lg-bg" href="product.html" ><i class="far fa-shopping-bag"></i></a></li>
+                <li><a  href="shop.htm">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li ><a id="lg-bg"class="active" href="product.html" ><i class="far fa-shopping-bag"></i></a></li>
                 <a href=""id="close"><i   class="far fa-times"></i></a>
             </ul>            
         </div>
@@ -34,6 +34,11 @@
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
+    <!-- button go to up -->
+    <div class="sticky">     
+        <a href="product.html"><div >☝️ GO UP</div></a>
+    </div>
+<!-- button go to up -->
 <!-- product view -->
 <section id="productdetail" class="section-p1">
     <div class="single-pro-img">
@@ -58,9 +63,11 @@
         </div>
     </div>
     <div class="single-pro-detail">
-        <h6>Home / T-Shirt</h6>
+        <div>
+         <h6>Home / T-Shirt</h6>
         <h5>men's fashion t-shirt</h5>
-        <h2>$139.00</h2>
+        <h2>$139</h2>
+     
         <select name="select-size" id="">
             <option value="">select size</option>
             <option selected value="XL">XL</option>
@@ -71,18 +78,21 @@
         </select>
         <input name="numberofpieces" type="number" value="1">
         <button class="normal" onclick="addToCart()">Add to cart</button>
+       </div>
+ 
+       <div>
         <h5>Product detail</h5>
         <p>
             T-Shirts · Sort · Pretty Basic T-Shirt In White · 
             Dancing Printed T-Shirt In White · Everyday Basic T-Shirt In White ·
             In Ravin, we provide a variety of T-shirts for men. 
         </p>
+       </div>
     </div>
 </section>
 
 <section id="cart" class="section-p1">
-    <table width="100%" id="cartTable">
-        <thead>
+    <table width="100%" border="1" id="cartTable">
             <tr>
                 <th>Remove</th>
                 <th>Image</th>
@@ -92,8 +102,7 @@
                 <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>
-        </thead>
-        <tbody id="cartBody">
+        <tbody id="cartBody" >
             <!-- Cart items will be dynamically added here -->
         </tbody>
     </table>
@@ -115,6 +124,7 @@
 </section>
 <!--End Sign up section -->
 
+
 <footer id="footer" class="section-p1">
     <div class="col ">
         <img class="logo" src="img/logo.png" alt="" srcset="">
@@ -125,25 +135,25 @@
        <div class="follow">
            <h4>Follow us</h4>
            <div class="icons">
-               <a href="" >
-                   <i class="fab fa-facebook-f"></i>
-                 </a>
-                 <a href="" >
-                   <i class="fab fa-twitter"></i>
-                 </a>
-                 <a href="" >
-                   <i class="fab fa-google"></i>
-                 </a>
-                 <a href="" >
-                   <i class="fab fa-instagram"></i>
-                 </a>
-                 <a href="" >
-                   <i class="fab fa-linkedin"></i>
-                 </a>
-                 <a href="" >
-                   <i class="fab fa-github"></i>
-                 </a>
-           </div>
+            <a target="_blank" href="https://www.facebook.com/" >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a target="_blank" href="https //twitter login.com" >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a target="_blank" href="https://google.com/" >
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="instagram.com"target="_blank" >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/feed/" >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="github.com" >
+                <i class="fab fa-github"></i>
+              </a>
+        </div>
        </div>
     </div>
     <div class="col ">
@@ -155,11 +165,11 @@
     </div>
     <div class="col ">
        <h4>My Accounts</h4>
-       <a href="#">Sign in</a>
-       <a href="#">View cart</a>
-       <a href="#">My Wishlist</a>
-       <a href="#">trak my order</a>
-       <a href="#">Help</a>
+       <a href="contact.html">Sign in</a>
+       <a href="product.html">View cart</a>
+       <a href="index.css">My Wishlist</a>
+       <a href="product.html">trak my order</a>
+       <a href="contact.html">Help</a>
     </div>
     <div class="col install">
        <h4>install app</h4>
@@ -211,7 +221,7 @@ function addToCart() {
         <td>${productSize}</td>
         <td>${productPrice}</td>
         <td>${productQuantity}</td>
-        <td>$${subtotal.toFixed(2)}</td>
+        <td>$${subtotal.toFixed(0)}</td>
     `;
     
     document.getElementById('cartBody').appendChild(newRow);
@@ -221,7 +231,15 @@ function addToCart() {
     cartProductImage.src = mainImg.src;
 }
 
-    
+    // Function to save cart contents to local storage
+    function saveCartToLocalStorage() {
+        // Get cart items
+        var cartItems = document.getElementById('cartBody').innerHTML;
+        // Save cart items to local storage
+        localStorage.setItem('cartItems', cartItems);
+    }
+
+      
     function removeRow(row) {
         var rowIndex = row.parentNode.parentNode.rowIndex;
         document.getElementById('cartTable').deleteRow(rowIndex);
