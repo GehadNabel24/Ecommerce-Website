@@ -19,7 +19,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-#errorMsg1,#errorMsg2,#errorMsg3{
+#errorMsg1,#errorMsg2,#errorMsg3,#errorMsg4{
     color: rgb(251, 63, 63);
     margin-top: 5px;
     display: none;
@@ -413,7 +413,7 @@ textarea.input {
         <ul   id="navbar">
             <li><a  href="index.html">Home</a></li>
             <li><a href="shop.htm">Shop</a></li>
-            <li><a href="contact.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a class="active"href="contact.html">Contact</a></li>
             <li ><a id="lg-bg" href="product.html" ><i class="far fa-shopping-bag"></i></a></li>
             <a href=""id="close"><i   class="far fa-times"></i></a>
@@ -429,6 +429,11 @@ textarea.input {
         <p>save more with coupons & up to 70 off! </p>
     </section>
 <!-- End Header -->
+<!-- stickey link -->
+<div class="sticky">     
+  <a href="contact.html"><div >☝️ GO UP</div></a>
+</div>
+<!--End stickey link -->
 <!-- start Featuret -->
 <div class="container">
     <span class="big-circle"></span>
@@ -480,7 +485,7 @@ textarea.input {
         <span class="circle two"></span>
 
         <form onsubmit="login(event)" autocomplete="off">
-          <h3 class="title">Sign your feedback</h3>
+          <h3 class="title">Sign In</h3>
           <div class="input-container">
               <input type="text" id="input1" required placeholder="Username" name="name" class="input" />
           </div>
@@ -497,13 +502,17 @@ textarea.input {
               <span>Phone</span>
           </div>
           <span id="errorMsg3">Phone not valid</span> 
-          <div class="input-container textarea">
-              <textarea placeholder="Message" required name="message" class="input"></textarea>
-              <span>Message</span>
+          <div class="input-container">
+            <input type="password" id="input4" required placeholder="password" name="password" class="input" />
+            <span>password</span>
+           </div>
+          <div class="input-container">
+            <input type="password" id="input5" required placeholder="confirm password" name="password" class="input" />
+            <span>confirm password</span>
           </div>
+          <span id="errorMsg4">password not match</span> 
           <input type="submit" value="Send" class="btn" />
-      </form>
-      
+        </form>      
   
       </div>
     </div>
@@ -638,10 +647,18 @@ textarea.input {
           errorMsg3.style.display = "block";
       }
    });
-    // function login(e) {
-    //     e.preventDefault();
-    //     console.log("Login");
-    // }
+   const passwordInput = document.getElementById('input4');
+  const confirmPasswordInput = document.getElementById('input5');
+  const errorMsg = document.getElementById('errorMsg4');
+
+  function validatePassword() {
+    if (passwordInput.value !== confirmPasswordInput.value) {
+      errorMsg.style.display = 'inline-block';
+    } else {
+      errorMsg.style.display = 'none';
+    }
+  }
+
 </script>
 
 </body>
