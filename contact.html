@@ -415,12 +415,15 @@ textarea.input {
             <li><a href="shop.htm">Shop</a></li>
             <li><a href="about.html">About</a></li>
             <li><a class="active"href="contact.html">Contact</a></li>
-            <li ><a id="lg-bg" href="product.html" ><i class="far fa-shopping-bag"></i></a></li>
+            <li ><a id="lg-bg" href="shop.htm#cart" ><i class="far fa-shopping-bag"></i></a></li>
+            <a href=""id="close"><i   class="far fa-times"></i></a>
+            <span class="count  cartCount"></span>
             <a href=""id="close"><i   class="far fa-times"></i></a>
         </ul>            
     </div>
     <div id="mobile">
-       <a href="product.html" ><i class="far fa-shopping-bag"></i></a>
+        <a href="shop.htm#cart" ><i class="far fa-shopping-bag"></i></a>
+        <span class="mobileCount cartCount"></span>
         <i id="bar" class="fas fa-outdent"></i>
     </div>
 </section>
@@ -489,7 +492,7 @@ textarea.input {
           <div class="input-container">
               <input type="text" id="input1" required placeholder="Username" name="name" class="input" />
           </div>
-          <span id="errorMsg1">length must be > 5 and Character not a Number</span>
+          <span id="errorMsg1">length must be >= 3 and Character not a Number</span>
       
           <div class="input-container">
               <input type="email" id="input2" required placeholder="Email" name="email" class="input" />
@@ -637,7 +640,7 @@ textarea.input {
     input3.addEventListener("input", function (e) 
     {
       // Regular expression for a basic phone number pattern
-      var phonePattern = /^[0-9]{10}$/;
+      var phonePattern = /^[0-9]{11}$/;
 
       if (phonePattern.test(e.target.value)) {
           input2.style.border = "2px solid green";
@@ -664,6 +667,7 @@ textarea.input {
     confirmPasswordInput.addEventListener('input', validatePassword);
 
 </script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

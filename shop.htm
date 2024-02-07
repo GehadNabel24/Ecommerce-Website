@@ -1,432 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="/Font Awesome v5/Font Awesome v5/all.min.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="css/media.css">
-    <script src="js/script.js"></script>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="/Font Awesome v5/Font Awesome v5/all.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <script src="js/script.js"></script>
+  <style></style>
 </head>
+
 <body>
-<!-- home -->
-<!-- start Header -->
-<section id="header">
+  <!-- home -->
+  <!-- start Header -->
+  <section id="header">
     <a href="#">
-        <img src="img/logo.png" class="logo" alt="Logo" srcset="">
+      <img src="img/logo.png" class="logo" alt="Logo" srcset="" />
     </a>
     <div>
-        <ul   id="navbar">
-            <li><a  href="index.html">Home</a></li>
-            <li><a class="active"href="shop.htm">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li ><a id="lg-bg" href="product.html" ><i class="far fa-shopping-bag"></i></a></li>
-            <a href=""id="close"><i   class="far fa-times"></i></a>
-        </ul>            
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.htm">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a id="lg-bg" href="shop.htm#cart"><i class="far fa-shopping-bag"></i></a>
+        </li>
+        <span class="count cartCount"></span>
+        <a href="" id="close"><i class="far fa-times"></i></a>
+      </ul>
     </div>
     <div id="mobile">
-       <a href="product.html" ><i class="far fa-shopping-bag"></i></a>
-        <i id="bar" class="fas fa-outdent"></i>
+      <a href="shop.htm#cart"><i class="far fa-shopping-bag"></i></a>
+      <span class="mobileCount cartCount"></span>
+      <i id="bar" class="fas fa-outdent"></i>
     </div>
-</section>
-    <section id="page-header">
-        <h2>#stayhome</h2>
-        <p>save more with coupons & up to 70 off! </p>
-    </section>
-<!-- End Header -->
-<!-- start Featuret -->
-<!-- stickey link -->
-<div class="sticky">     
-    <a href="shop.htm"><div >☝️ GO UP</div></a>
-</div>
-<!--End stickey link -->
-<!-- filter -->
-<div class = "filter-btns">
-     
-    <button type = "button" class = "filter-btn " id = "all">all</button>
-    <button type = "button" class = "filter-btn" id = "new">new</button>
-    <button type = "button" class = "filter-btn" id = "office-wear">office wear</button>
-    <button type = "button" class = "filter-btn" id = "t-shirts">t-shirts</button>
-    <button type = "button" class = "filter-btn" id = "offers">offers</button>
+  </section>
+  <section id="page-header">
+    <h2>#stayhome</h2>
+    <p>save more with coupons & up to 70 off!</p>
+  </section>
+  <!-- End Header -->
+  <!-- start Featuret -->
+  <!-- stickey link -->
+  <div class="sticky">
+    <a href="shop.htm">
+      <div>☝️ GO UP</div>
+    </a>
   </div>
-  
-  
-<!--End filter -->
+  <!--End stickey link -->
+  <!-- filter -->
+  <div class="filter-btns">
+    <button type="button" class="filter-btn active-btn" data-category="all">
+      All
+    </button>
+    <button type="button" class="filter-btn" data-category="men">Men</button>
+    <button type="button" class="filter-btn" data-category="woman">
+      Woman
+    </button>
+    <button type="button" class="filter-btn" data-category="dress">
+      Dress
+    </button>
+    <button type="button" class="filter-btn" data-category="offer">
+      Offers
+    </button>
+  </div>
 
-<!-- start Feature pproducts -->
-    <section id="product1"class="section-p1">
+  <!--End filter -->
 
-        <div class="produc-container" >
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f1.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>SHIRT IN STRETCH COTTON BLEND</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$88</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f2.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>SHIRT IN STRETCH COTTON BLEND</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$44</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f3.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>PLEATED FOIL BLOUSE</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$77</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f4.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>catoon astronaut t-shirt</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$44</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f5.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>Women Shirts & Blouses</h5>  
+  <!-- start Feature pproducts -->
+  <section id="product1" class="section-p1">
+    <!-- <div class="productlist"></div> -->
 
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$69</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f6.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>women's fashion</h5> 
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$66</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f7.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>catoon astronaut pantas</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$94</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/f8.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>Grey Shirts For Men and Women</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$68</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-     
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n1.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>FLOWY HIGH-WAISTED TROUSERS</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$68</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n2.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>SHIRT IN STRETCH COTTON BLEND</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$44</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n3.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>PLEATED FOIL BLOUSE</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$77</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n4.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>catoon astronaut t-shirt</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$44</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n5.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>Women Shirts & Blouses</h5>  
-
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$69</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n6.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>women's fashion</h5> 
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$66</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n7.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>catoon astronaut pantas</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$94</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            <div class="pro" onclick="showProductDetail(event)">
-                <img src="img/products/n8.jpg" alt="products">
-                <div class="product-decs">
-                    <span>adidas</span>
-                    <h5>Grey Shirts For Men and Women</h5>  
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>$68</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart "></i></a>
-            </div>
-            
+    <div class="produc-container">
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/f1.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>SHIRT IN STRETCH COTTON BLEND</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$88</h4>
         </div>
-    </section>
-<!-- end Feature pproducts -->
-<!-- end Feature -->
-<section id="pagination" class="section-p1">
+        <i onclick="showProductDetail(event)" class="fal fa-shopping-cart cart"></i>
+      </div>
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/49_2241950f-5769-427c-8a36-39e2faf6f33d_270x.jpg.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Vneck Strappy Printed Mini Dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$155</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)" src="img/products/f6.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>women's fashion</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$66</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/f2.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>SHIRT IN STRETCH COTTON BLEND</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$44</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/26_549f23b7-8930-44ed-806f-22aa91af632a_271x.progressive.jpg?v=1671183061.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Solid Button Crop Pink Tee</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$160</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/54_1371f01d-2643-4743-aeee-d8ab25ad576e_270x.jpg.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>One Shoulder Flared Sleeves Dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$68</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/10_29b57208-b863-4998-b027-43b607391df9_270x.jpg.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Grey Shirts For Men and Women</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$109</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/f3.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>PLEATED FOIL BLOUSE</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$77</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/07_2ecefaa1-3f06-4941-8f77-e215246acf6c_270x.jpg.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Grey Shirts For Men and Women</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$120</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/f4.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>catoon astronaut t-shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$44</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/f5.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>Women Shirts & Blouses</h5>
+
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$69</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)" src="img/products/f7.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>catoon astronaut pantas</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$94</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman offer">
+        <img onclick="displayProductDetail(event)" src="img/products/f8.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>Grey Shirts For Men and Women</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$79</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro men offer">
+        <img onclick="displayProductDetail(event)" src="img/products/n1.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>FLOWY HIGH-WAISTED TROUSERS</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$89</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro men offer">
+        <img onclick="displayProductDetail(event)" src="img/products/n2.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>SHIRT IN STRETCH COTTON BLEND</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$44</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/n4.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>catoon astronaut t-shirt</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$94</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/n5.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>Women Shirts & Blouses</h5>
+
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$88</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/37_6d0b5acc-19fa-407e-96eb-7956f12be496_271x.progressive.jpg?v=1679547745.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Vneck Cold Shoulder Mini Dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$170</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/n6.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>women's fashion</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$95</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men">
+        <img onclick="displayProductDetail(event)" src="img/products/n7.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>catoon astronaut pantas</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$74</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro  womman Dress">
+        <img onclick="displayProductDetail(event)"
+        src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/45_b16d32b0-68c7-4189-b4cd-b986f927aaf6_271x.progressive.jpg?v=1677146174.png" 
+        class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Vneck Half Sleeve Printed Dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$500</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro men offer">
+        <img onclick="displayProductDetail(event)" src="img/products/n8.jpg" alt="products" />
+        <div class="product-decs">
+          <span>adidas</span>
+          <h5>Grey Shirts For Men and Women</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$60</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+        src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/33_db15b682-a4bd-40b8-ab24-bde7f5419ede_270x.jpg"  class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Halter Neck Mini Printed Dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$230</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman Dress">
+        <img onclick="displayProductDetail(event)"
+        src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/29_f59e4f13-7baa-4324-a68c-1a00abb27c7b_270x.jpg" class="card-img-top shop-item-image"          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Side Pockets Elegant Mustard Dress</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$155</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/07_ce5ef752-43ce-4b33-a049-525d45a6378e_271x.progressive.jpg?v=1677146215.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Grey Shirts For Men and Women</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$68</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/30_3e440521-e22a-4ebf-bba3-ef2d4cf68dcc_271x.progressive.jpg?v=1666244343.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Grey Shirts For Men and Women</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$68</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/39_6d989548-f713-4489-8575-7301db9f04ae_271x.progressive.jpg?v=1666243255.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Tiny Front Peek-A-Boo Printed Top</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$68</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+
+      <div class="pro womman">
+        <img onclick="displayProductDetail(event)"
+          src="https://cdn.shopify.com/s/files/1/0259/7103/2124/products/04_5e44a4e3-e8e5-4533-bc6b-6ee091852739_271x.progressive.jpg?v=1677146332.png"
+          class="card-img-top shop-item-image" alt="..." />
+        <div class="product-decs">
+          <h5>Three Tiered Sleeve Frilled Printed Top</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$68</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart" onclick="showProductDetail(event)"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- end Feature pproducts -->
+  <!-- end Feature -->
+  <section id="pagination" class="section-p1">
     <a href="">1</a>
     <a href="">2</a>
     <a href=""><i class="fal fa-long-arrow-alt-right"></i></a>
-    
-</section>
+  </section>
 
-<!-- Sign up section -->
-<section id="newSletters" class="section-p1 section-m1">
+  <section id="cart" class="section-p1">
+    <table width="100%" border="1" id="cartTable">
+      <tr>
+        <th>Remove</th>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      <tbody id="cartBody">
+        <!-- Cart items will be dynamically added here -->
+      </tbody>
+    </table>
+    <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price" style="text-align: right">$0</span>
+    </div>
+    <div class="btn-purchase" style="margin-top: 10%">
+      <button type="button" onclick="purchaseClicked()" class="btn btn-dark btn-purchase">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 6%"></i>PURCHASE
+      </button>
+    </div>
+  </section>
+
+  <!-- Sign up section -->
+  <section id="newSletters" class="section-p1 section-m1">
     <div class="newtext">
-        <h4>sign up for newSletters</h4>
-        <p>get e-mail updates about our last shop and <span>special offers</span> </p>        
+      <h4>sign up for newSletters</h4>
+      <p>
+        get e-mail updates about our last shop and <span>special offers</span>
+      </p>
     </div>
     <div class="form">
-        <input type="email" placeholder="Enter your email address">
-        <button class="normal">Sign up</button>
+      <input type="email" placeholder="Enter your email address" />
+      <button class="normal">Sign up</button>
     </div>
+  </section>
+  <!--End Sign up section -->
 
-
-</section>
-<!--End Sign up section -->
-
-<footer class="section-p1">
-    <div class="col ">
-        <img class="logo" src="img/logo.png" alt="" srcset="">
-       <h4>contact</h4>
-       <p><i class="fas fa-home mr-3"></i><strong>Address: </strong> New York, NY 10012, US</p>
-       <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-       <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-       <div class="follow">
-           <h4>Follow us</h4>
-           <div class="icons">
-            <a target="_blank" href="https://www.facebook.com/" >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a target="_blank" href="https //twitter login.com" >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a target="_blank" href="https://google.com/" >
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="instagram.com"target="_blank" >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.linkedin.com/feed/" >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="github.com" >
-                <i class="fab fa-github"></i>
-              </a>
+  <footer class="section-p1">
+    <div class="col">
+      <img class="logo" src="img/logo.png" alt="" srcset="" />
+      <h4>contact</h4>
+      <p>
+        <i class="fas fa-home mr-3"></i><strong>Address: </strong> New York,
+        NY 10012, US
+      </p>
+      <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+      <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+      <div class="follow">
+        <h4>Follow us</h4>
+        <div class="icons">
+          <a target="_blank" href="https://www.facebook.com/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a target="_blank" href="https //twitter login.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a target="_blank" href="https://google.com/">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/feed/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="github.com">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
-       </div>
+      </div>
     </div>
-    <div class="col ">
-       <h4>About US</h4>
-       <a href="#">Delivery Information</a>
-       <a href="#">Privacy policy</a>
-       <a href="#">Term & condition</a>
-       <a href="#">contact us</a>
+    <div class="col">
+      <h4>About US</h4>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Term & condition</a>
+      <a href="#">contact us</a>
     </div>
-    <div class="col ">
-       <h4>My Accounts</h4>
-       <a href="#">Sign in</a>
-       <a href="#">View cart</a>
-       <a href="#">My Wishlist</a>
-       <a href="#">trak my order</a>
-       <a href="#">Help</a>
+    <div class="col">
+      <h4>My Accounts</h4>
+      <a href="#">Sign in</a>
+      <a href="#">View cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">trak my order</a>
+      <a href="#">Help</a>
     </div>
     <div class="col install">
-       <h4>install app</h4>
-       <p>from app store or google play</p>
-       <div class="row">
-           <img src="img/pay/app.jpg" alt="" srcset="">
-           <img src="img/pay/play.jpg" alt="" srcset="">
-       </div>
-       <p>secured payment gateways</p>
-       <img src="img/pay/pay.png" alt="">
+      <h4>install app</h4>
+      <p>from app store or google play</p>
+      <div class="row">
+        <img src="img/pay/app.jpg" alt="" srcset="" />
+        <img src="img/pay/play.jpg" alt="" srcset="" />
+      </div>
+      <p>secured payment gateways</p>
+      <img src="img/pay/pay.png" alt="" />
     </div>
-    
-   
-   </footer>
-   <section class="copyright">
-       <div >
-           <p> © 2024 Copyright: Gehad NAbel HTML & CSS & JS Ecommerce site  </p>
-        </div>
-   </section>
+  </footer>
+  <section class="copyright">
+    <div>
+      <p>© 2024 Copyright: Gehad NAbel HTML & CSS & JS Ecommerce site</p>
+    </div>
+  </section>
+  <div id="customAlert" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="alertIcon">&#10003;</div>
+      <p id="alertMessage"></p>
+      <p id="totalPrice"></p>
+      <button id="okButton">OK</button>
+    </div>
+  </div>
 
-   <script>
-    function showProductDetail(event) {
-        event.preventDefault();
+  <!-- /////////////////JS///////////// -->
 
-        const productElement = event.currentTarget;
-        const productName = productElement.querySelector('h5').textContent.trim();
-        const productPrice = productElement.querySelector('h4').textContent.trim();
-        const productImage = productElement.querySelector('img').src;
-
-        const detailUrl = `display.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&image=${encodeURIComponent(productImage)}`;
-        window.open(detailUrl, '_blank');
-    }
-</script>
-    
+  <script src="js/script.js"></script>
 </body>
+
 </html>

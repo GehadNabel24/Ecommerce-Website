@@ -4,71 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
+       h1
+       {
+        text-align: center;
+
+       }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 90%;
+            margin: 50px auto;
+            border: 1px solid gray ;
+            border-radius: 30px;
+            
         }
-        h1 {
+
+        .product-image {
+            flex: 1;
+            width: 30%;
+            height: 60%;
             text-align: center;
-            color: #333;
         }
-        .product-detail {
-            margin-top: 20px;
-        }
-        img {
+
+        .product-image img {
             max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            display: block;
-            margin: 0 auto;
+            max-height: 100%;
+            border-radius: 10px;
         }
-        pre {
-            white-space: pre-wrap;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
+
+        .product-details {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .product-details h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .product-details p {
+            margin: 0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #color {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .color {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 2px solid #fff; /* Add a white border around each color */
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
+
+        .color:hover {
+            transform: scale(1.2); /* Increase size on hover */
+        }
+        @media (max-width: 500px) 
+        {
+            .color
+            {
+                width: 19px;
+                height: 19px;
+                margin: 5px;
+
+            }
+            .container {
+           
+            height: 80vh;
+            width: 90%;
+            margin: 50px auto;
+            border: 1px solid gray ;
+            border-radius: 30px;
+            
+        }
+           .container
+           {
+            display: flex;
+            flex-direction: column;            
+           }
+           .product-image 
+           {
+            flex: 1;
+            width: 90%;
+            height: 60%;
+            margin: 20px;
+          }
+          h2
+          {
+            font-size: 20px;
+          }
         }
     </style>
 </head>
 <body>
+    <h1>Your Product</h1>
     <div class="container">
-        <h1>Product Detail</h1>
-        <div class="product-detail" id="productDetail"></div>
+        <div class="product-image">
+            <img id="productImage" src="" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h2 id="productName"></h2>
+            <p id="productPrice"></p>
+            <p id="productType"></p>
+            <div id="color">
+                <span>Available colors:</span>
+                <div class="color" style="background-color: brown;"></div>
+                <div class="color" style="background-color: blue;"></div>
+                <div class="color" style="background-color: rgb(0, 0, 0);"></div>
+                <div class="color" style="background-color: palevioletred;"></div>
+            </div>
+        </div>
     </div>
-    <script>
-        // Extract product details from URL query parameters
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const productName = urlParams.get('name');
-        const productPrice = urlParams.get('price');
-        const productImage = urlParams.get('image');
-
-        // Display product details in the page
-        const productDetailElement = document.getElementById('productDetail');
-        if (productName && productPrice && productImage) {
-            const detailString = `
-                <img src="${productImage}" alt="${productName}">
-                <pre>
-                    Name: ${productName}
-                    Price: ${productPrice}
-                </pre>
-            `;
-            productDetailElement.innerHTML = detailString;
-        } else {
-            productDetailElement.innerHTML = '<p>No product details found.</p>';
-        }
-    </script>
 </body>
+<script>
+    // Retrieve product details from URL query parameters
+// Retrieve product details from URL query parameters
+const urlParams = new URLSearchParams(window.location.search);
+const productName = decodeURIComponent(urlParams.get('name'));
+const productImageSrc = decodeURIComponent(urlParams.get('image'));
+const productPrice = parseFloat(decodeURIComponent(urlParams.get('price')));
+const productType = decodeURIComponent(urlParams.get('type'));
+
+// Update the elements in display.html with the product details
+document.getElementById('productName').textContent = productName;
+document.getElementById('productImage').setAttribute('src', productImageSrc);
+document.getElementById('productPrice').textContent = 'Price: $' + productPrice.toFixed(2);
+document.getElementById('productType').textContent = 'Type: ' + productType;
+
+
+</script>
 </html>

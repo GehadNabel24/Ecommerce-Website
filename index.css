@@ -93,6 +93,7 @@ body
     display: flex ;
     align-items: center;
     justify-content: center;
+    position: relative;
    
 }
 #navbar li
@@ -125,6 +126,7 @@ body
 #mobile
 {
     display: none;
+    position: relative;
     align-items: center;
 }
 #navbar #close {
@@ -833,7 +835,124 @@ font-size: 26px;
   .filter-btn:hover{
     color: #555;
   }
-  .filter-btn:hover::after{
+  .filter-btn:hover::after,.filter-btn:focus::after{
     width: 100%;
   }
+ 
 /* End filter shop */
+/* cart count */
+.count
+{
+    position: absolute;
+    right: 4%;
+    top: -60%;
+    color:red;
+}
+/* cart tabel */
+#cartTable {
+    border-collapse: collapse; /* Collapse table borders */
+    width: 100%;
+}
+
+#cartTable th, #cartTable td {
+    border: none; /* Remove border */
+    padding: 10px; /* Add padding */
+}
+
+#cartTable th {
+    background-color: #f2f2f2; /* Light gray background color for header */
+}
+
+#cartTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color */
+}
+
+/* CSS for Quantity input */
+/* CSS for Quantity input */
+.quantity-input {
+    width: 50px; /* Adjust width as needed */
+    text-align: center; /* Center-align text */
+    padding: 5px; /* Add padding */
+}
+
+/* CSS for Remove button */
+.remove-button {
+    background-color: #ff6347; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.remove-button:hover {
+    background-color: #cc4c38; /* Darker red color on hover */
+}
+.btn-purchase{
+    text-align: center;
+    margin: auto;
+    padding: 2%;
+    width: 50%;
+  }
+  .cart-total{
+    text-align: right;
+    font-size: 1.3rem;
+  }
+
+  /* alert */
+  /* Alert Box */
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center; /* Center align content */
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #alertIcon {
+    font-size: 48px; /* Icon size */
+    margin-bottom: 20px; /* Spacing below icon */
+    color: #28a745; /* Green color for success */
+  }
+  
+  #okButton {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Button padding */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  #okButton:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  /* filter */
