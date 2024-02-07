@@ -71,7 +71,17 @@ p
       color: black;
       font-size: 24px;
       padding-left: 20px;
+      position: relative;
     }
+   .mobileCount
+   {
+    position: absolute;
+      color: red;
+      right: 45% ;
+      top: -50%;
+
+    }
+
     #navbar #close    {
         position: absolute;
         top: 30px;
@@ -149,14 +159,31 @@ p
   width: 70%;
 }
 
-
 }
 
+@media (max-width: 500px) {
 
+.filter-btn
+{
+    color: black;
+    margin: 10px 10px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
 
-
-@media (max-width: 477px) {
-   
+}
+.remove-button,.quantity-input
+{
+  width: 30px ;
+  font-size: 7px;
+  padding: 0;
+  margin: 0;
+}   
+.btn-purchase
+{
+  width: 90px;
+  padding: 4px;
+}
 #header
 {
   padding: 10px 30px ;
@@ -197,6 +224,75 @@ h1{
 {
   width: 100%;
 }
+#about-head
+{
+    flex-direction: column;
+}
+#about-head img
+{
+    width: 100%;
+}
+#about-app .video video
+    {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+/* cart */
+#productdetail 
+{
+   display: flex;
+   flex-direction: column;  
+}
+#productdetail .single-pro-img
+{
+    width: 100%;
+    margin: 0px auto;
+}
+.single-pro-detail  h6,.single-pro-detail  h5
+{
+   padding:  0  ;
+   margin: 10;
+   color: #088178;
+}
+#productdetail .single-pro-detail input
+{
+    width: 30px;
+    height: 30px;
+    padding-left: 0px;
+    font-size: 12px;
+    text-align: center;
+}
+.single-pro-detail div
+{
+  display: flex;
+  flex-direction: column;
+}
+/* tabel */
+#cartTable th,#cartTable #cartBody
+{
+  font-size: 9px;
+}
+/* tabel */
 
+#productdetail .single-pro-detail select
+{
+  display: inline;
+}
+
+#productdetail .single-pro-detail p
+{
+  width: 100%;
+}
+/*End cart */
+/* .sticky */
+.sticky
+{
+  height: 30px;
+}
+.sticky div
+{
+  font-size: 10px;
+}
 
   }
