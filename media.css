@@ -71,7 +71,17 @@ p
       color: black;
       font-size: 24px;
       padding-left: 20px;
+      position: relative;
     }
+   .mobileCount
+   {
+    position: absolute;
+      color: red;
+      right: 45% ;
+      top: -50%;
+
+    }
+
     #navbar #close    {
         position: absolute;
         top: 30px;
@@ -152,7 +162,28 @@ p
 }
 
 @media (max-width: 500px) {
-   
+
+.filter-btn
+{
+    color: black;
+    margin: 10px 10px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+.remove-button,.quantity-input
+{
+  width: 30px ;
+  font-size: 7px;
+  padding: 0;
+  margin: 0;
+}   
+.btn-purchase
+{
+  width: 90px;
+  padding: 4px;
+}
 #header
 {
   padding: 10px 30px ;
